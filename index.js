@@ -8,6 +8,19 @@ const users = require("./MOCK_DATA.json");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Middleware to write log files as per my needs.
+app.use((req, res, next) => {
+  const userIP = req.ip;
+  const reqURL = req.url;
+  const logData = `${new Date(Date.now()).toLocaleString()}, IP: ${userIP}, ${
+    req.method
+  } ${reqURL}\n`;
+  fs.appendFile("log.txt", logData, (err, data) => {
+    if (err) return res.json("Error writing log file.");
+    next();
+  });
+});
+
 app.get("/users", (req, res) => {});
 
 app.get("/api/users", (req, res) => {
