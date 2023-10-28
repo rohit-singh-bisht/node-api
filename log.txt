@@ -36,3 +36,4 @@
 10/28/2023, 1:39:40 PM, IP: ::ffff:127.0.0.1, PATCH /api/users/653cb4c28f09635002b3bea2
 10/28/2023, 1:40:52 PM, IP: ::ffff:127.0.0.1, GET /api/users
 10/28/2023, 1:59:35 PM, IP: ::ffff:127.0.0.1, POST /api/users
+10/28/2023, 5:19:53 PM, IP: ::ffff:127.0.0.1, POST /api/users
